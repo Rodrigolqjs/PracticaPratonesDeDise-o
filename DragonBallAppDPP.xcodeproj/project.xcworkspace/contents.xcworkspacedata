@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/rodrigo/Desktop/KeepCoding/DesingPatternsPractice/DragonBallAppDPP.xcodeproj">
    </FileRef>
 </Workspace>
