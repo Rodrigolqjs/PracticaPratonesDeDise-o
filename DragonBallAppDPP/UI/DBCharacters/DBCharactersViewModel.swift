@@ -8,7 +8,10 @@
 import Foundation
 
 protocol DBCharactersViewModelProtocol {
+    var dataCount: Int { get }
     func onViewsLoaded()
+    func data(for index: Int) -> Hero?
+    func onItemSelectedAt(at index: Int)
 }
 
 class DBCharactersViewModel {
@@ -22,13 +25,24 @@ class DBCharactersViewModel {
     }
     
     func loadData() {
-        print(heroes)
     }
     
 }
 
 extension DBCharactersViewModel: DBCharactersViewModelProtocol {
+    var dataCount: Int {heroes.count}
+    
+    func data(for index: Int) -> Hero? {
+        guard index < dataCount else { return nil }
+        return heroes[index]
+    }
+    
     func onViewsLoaded() {
         loadData()
+    }
+    
+    func onItemSelectedAt(at index: Int) {
+        guard let data = data(for: index) else { return }
+        viewDelegate?.navigateToDetail(with: data)
     }
 }

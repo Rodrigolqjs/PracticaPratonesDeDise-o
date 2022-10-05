@@ -20,6 +20,7 @@
 		5BB8956828B8343100A27B9C /* LocalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8956728B8343000A27B9C /* LocalDataService.swift */; };
 		5BB8956D28B839F300A27B9C /* DBCharacters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB8956C28B839F300A27B9C /* DBCharacters.storyboard */; };
 		5BB8956F28B83A1300A27B9C /* DBCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8956E28B83A1300A27B9C /* DBCharactersViewController.swift */; };
+		5BC6DE6D28EB421E008BB5E1 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC6DE6C28EB421E008BB5E1 /* CellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5BB8956728B8343000A27B9C /* LocalDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataService.swift; sourceTree = "<group>"; };
 		5BB8956C28B839F300A27B9C /* DBCharacters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DBCharacters.storyboard; sourceTree = "<group>"; };
 		5BB8956E28B83A1300A27B9C /* DBCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBCharactersViewController.swift; sourceTree = "<group>"; };
+		5BC6DE6C28EB421E008BB5E1 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				5BB8956C28B839F300A27B9C /* DBCharacters.storyboard */,
 				5BB8956E28B83A1300A27B9C /* DBCharactersViewController.swift */,
 				5B13AA7C28BDC2AC00575D23 /* DBCharactersViewModel.swift */,
+				5BC6DE6C28EB421E008BB5E1 /* CellView.swift */,
 			);
 			path = DBCharacters;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				5B9A9A1B289DD6ED00BE65E7 /* SplashViewController.swift in Sources */,
 				5B9A9A01289DD29C00BE65E7 /* SceneDelegate.swift in Sources */,
 				5BB8956828B8343100A27B9C /* LocalDataService.swift in Sources */,
+				5BC6DE6D28EB421E008BB5E1 /* CellView.swift in Sources */,
 				5B13AA7D28BDC2AC00575D23 /* DBCharactersViewModel.swift in Sources */,
 				5BB8956628B8324B00A27B9C /* HeroModel.swift in Sources */,
 				5B13AA7B28BDB35000575D23 /* SplashViewModel.swift in Sources */,

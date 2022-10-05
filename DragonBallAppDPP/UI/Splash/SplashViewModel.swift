@@ -15,8 +15,8 @@ class SplashViewModel {
     }
     
     func loadData() {
-            viewDelegate?.getToken(network: networkService)
-            viewDelegate?.navigateToDBCharacters()
+        viewDelegate?.getToken(network: networkService, completion: {
+            self.viewDelegate?.navigateToDBCharacters()
         })
     }
 }

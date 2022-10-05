@@ -8,8 +8,8 @@
 import UIKit
 
 protocol SplashViewControllerProtocol: AnyObject {
-    func getHeroesSplash(network: NetworkService, token: String)
-    func getToken(network: NetworkService)
+    func getHeroesSplash(network: NetworkService, token: String, completion: @escaping () -> Void)
+    func getToken(network: NetworkService, completion: @escaping () -> Void)
     func navigateToDBCharacters()
 }
 
@@ -33,16 +33,18 @@ final class SplashViewController: UIViewController {
 
 extension SplashViewController: SplashViewControllerProtocol {
     
-    func getHeroesSplash(network: NetworkService, token: String) {
+    func getHeroesSplash(network: NetworkService, token: String, completion: @escaping () -> Void) {
         network.getHeroes(token: token, completion: { heroes, error in
                 self.heroes = heroes
-            print(self.heroes)
+                completion()
         })
     }
     
-    func getToken(network: NetworkService) {
+    func getToken(network: NetworkService, completion: @escaping () -> Void) {
         network.login { token, error in
-                self.getHeroesSplash(network: network, token: token ?? "")
+            self.getHeroesSplash(network: network, token: token ?? "") {
+                completion()
+            }
         }
     }
     
