@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EJC-C8-D6V">
-                                <rect key="frame" x="0.0" y="39" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EJC-C8-D6V">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s7R-T0-eZr">
                                     <size key="itemSize" width="128" height="128"/>
@@ -79,6 +78,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EJC-C8-D6V" secondAttribute="trailing" id="SpQ-aB-wHg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="EJC-C8-D6V" secondAttribute="bottom" id="g0H-uG-ScK"/>
+                            <constraint firstItem="EJC-C8-D6V" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="kIB-Qn-Zdv"/>
+                            <constraint firstItem="EJC-C8-D6V" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vK1-fz-D7b"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="EJC-C8-D6V" id="tLN-kQ-miy"/>
@@ -86,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+            <point key="canvasLocation" x="406" y="102"/>
         </scene>
     </scenes>
     <resources>
