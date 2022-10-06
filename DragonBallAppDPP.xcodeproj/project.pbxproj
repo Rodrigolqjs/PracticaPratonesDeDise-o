@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5B13AA7B28BDB35000575D23 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B13AA7A28BDB35000575D23 /* SplashViewModel.swift */; };
 		5B13AA7D28BDC2AC00575D23 /* DBCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B13AA7C28BDC2AC00575D23 /* DBCharactersViewModel.swift */; };
+		5B24E4F528EDE3EC00510474 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24E4F428EDE3EC00510474 /* DetailViewController.swift */; };
+		5B24E4F728EDE42200510474 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24E4F628EDE42200510474 /* DetailViewModel.swift */; };
+		5B24E4F928EDE42F00510474 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B24E4F828EDE42F00510474 /* Detail.storyboard */; };
 		5B9A99FF289DD29C00BE65E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A99FE289DD29C00BE65E7 /* AppDelegate.swift */; };
 		5B9A9A01289DD29C00BE65E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A9A00289DD29C00BE65E7 /* SceneDelegate.swift */; };
 		5B9A9A08289DD29C00BE65E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9A9A07289DD29C00BE65E7 /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		5B13AA7A28BDB35000575D23 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		5B13AA7C28BDC2AC00575D23 /* DBCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBCharactersViewModel.swift; sourceTree = "<group>"; };
+		5B24E4F428EDE3EC00510474 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5B24E4F628EDE42200510474 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		5B24E4F828EDE42F00510474 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		5B9A99FB289DD29C00BE65E7 /* DragonBallAppDPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallAppDPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9A99FE289DD29C00BE65E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9A9A00289DD29C00BE65E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B24E4F328EDE3C800510474 /* DetailDB */ = {
+			isa = PBXGroup;
+			children = (
+				5B24E4F428EDE3EC00510474 /* DetailViewController.swift */,
+				5B24E4F628EDE42200510474 /* DetailViewModel.swift */,
+				5B24E4F828EDE42F00510474 /* Detail.storyboard */,
+			);
+			path = DetailDB;
+			sourceTree = "<group>";
+		};
 		5B9A99F2289DD29C00BE65E7 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9A9A16289DD51000BE65E7 /* LaunchScreen.storyboard */,
+				5B24E4F328EDE3C800510474 /* DetailDB */,
 				5BB8956928B839D800A27B9C /* DBCharacters */,
 				5B9A9A15289DD4CA00BE65E7 /* Splash */,
 			);
@@ -200,6 +217,7 @@
 				5BB8956D28B839F300A27B9C /* DBCharacters.storyboard in Resources */,
 				5B9A9A08289DD29C00BE65E7 /* Assets.xcassets in Resources */,
 				5B9A9A19289DD6DA00BE65E7 /* Splash.storyboard in Resources */,
+				5B24E4F928EDE42F00510474 /* Detail.storyboard in Resources */,
 				5B9A9A17289DD51000BE65E7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,12 +229,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B24E4F528EDE3EC00510474 /* DetailViewController.swift in Sources */,
 				5BB8956F28B83A1300A27B9C /* DBCharactersViewController.swift in Sources */,
 				5BB8956328B82D5800A27B9C /* NetworkService.swift in Sources */,
 				5B9A99FF289DD29C00BE65E7 /* AppDelegate.swift in Sources */,
 				5B9A9A1B289DD6ED00BE65E7 /* SplashViewController.swift in Sources */,
 				5B9A9A01289DD29C00BE65E7 /* SceneDelegate.swift in Sources */,
 				5BB8956828B8343100A27B9C /* LocalDataService.swift in Sources */,
+				5B24E4F728EDE42200510474 /* DetailViewModel.swift in Sources */,
 				5BC6DE6D28EB421E008BB5E1 /* CellView.swift in Sources */,
 				5B13AA7D28BDC2AC00575D23 /* DBCharactersViewModel.swift in Sources */,
 				5BB8956628B8324B00A27B9C /* HeroModel.swift in Sources */,

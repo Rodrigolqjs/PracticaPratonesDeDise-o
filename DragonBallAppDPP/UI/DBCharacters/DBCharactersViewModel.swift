@@ -42,7 +42,7 @@ extension DBCharactersViewModel: DBCharactersViewModelProtocol {
     }
     
     func onItemSelectedAt(at index: Int) {
-        guard let data = data(for: index) else { return }
+        guard let data = data(for: index) else { return print("no data")}
         viewDelegate?.navigateToDetail(with: data)
     }
 }

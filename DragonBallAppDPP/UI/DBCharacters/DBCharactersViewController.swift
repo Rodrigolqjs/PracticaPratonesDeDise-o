@@ -9,7 +9,7 @@ import UIKit
 
 protocol DBCharactersViewControllerProtocol {
     func configureViews()
-    func navigateToDetail(with: data)
+    func navigateToDetail(with data: Hero?)
 }
 
 class DBCharactersViewController: UIViewController {
@@ -29,6 +29,7 @@ class DBCharactersViewController: UIViewController {
 
 }
 
+
 extension DBCharactersViewController: DBCharactersViewControllerProtocol {
     func configureViews() {
         collectionView.delegate = self
@@ -36,8 +37,7 @@ extension DBCharactersViewController: DBCharactersViewControllerProtocol {
     }
     
     func navigateToDetail(with data: Hero?) {
-        let nextSB = UIStoryboard(name: "DetailSB", bundle: nil)
-        
+        let nextSB = UIStoryboard(name: "Detail", bundle: nil)
         guard let viewData = data,
               let destination = nextSB.instantiateInitialViewController() as? DetailViewController else { return }
 
@@ -46,6 +46,7 @@ extension DBCharactersViewController: DBCharactersViewControllerProtocol {
         navigationController?.pushViewController(destination, animated: true)
     }
 }
+
 
 extension DBCharactersViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -70,7 +71,7 @@ extension DBCharactersViewController: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel?.onItemSelected(at: indexPath.row)
+        viewModel?.onItemSelectedAt(at: indexPath.row)
     }
     
 }
