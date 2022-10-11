@@ -16,6 +16,8 @@ protocol SplashViewControllerProtocol: AnyObject {
 final class SplashViewController: UIViewController {
     
     var viewModel: SplashViewModelProtocol?
+    var characters: [Character] = []
+    var villains: [Villain] = []
     var heroes: [Hero] = []
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -34,8 +36,23 @@ final class SplashViewController: UIViewController {
 extension SplashViewController: SplashViewControllerProtocol {
     
     func getHeroesSplash(network: NetworkService, token: String, completion: @escaping () -> Void) {
-        network.getHeroes(token: token, completion: { heroes, error in
-                self.heroes = heroes
+        network.getCharacters(token: token, completion: { characters, error in
+            characters.forEach { character in
+                if(character.name == "Androide 17"  ||
+                   character.name == "Célula"       ||
+                   character.name == "Raditz"       ||
+                   character.name == "Beerus"       ||
+                   character.name == "Freezer"      ||
+                   character.name == "Androide 18"
+                   
+                ) {
+                    self.villains.append(Villain(id: character.id, name: character.name, description: character.description, photo: character.photo, favorite: character.favorite))
+                    print(self.villains)
+                } else {
+                    self.heroes.append(Hero(id: character.id, name: character.name, description: character.description, photo: character.photo, favorite: character.favorite))
+                    print(self.heroes)
+                }
+            }
                 completion()
         })
     }
@@ -50,11 +67,9 @@ extension SplashViewController: SplashViewControllerProtocol {
     
     func navigateToDBCharacters() {
         let nextStoryboard = UIStoryboard(name: "DBCharacters", bundle: nil)
+        guard let destinationVC = nextStoryboard.instantiateInitialViewController() as? DBTabBarViewController else { return }
         
-        guard let destinationVC = nextStoryboard.instantiateInitialViewController() as? DBCharactersViewController else { return }
-        
-        destinationVC.viewModel = DBCharactersViewModel(viewDelegate: destinationVC, heroes: self.heroes)
-        
+        destinationVC.viewModel = DBTabBarViewModel(viewDelegate: destinationVC, heroes: self.heroes, villains: self.villains)
         DispatchQueue.main.async {
             self.navigationController?.setViewControllers([destinationVC], animated: true)
         }

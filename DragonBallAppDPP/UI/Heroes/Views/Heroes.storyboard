@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gGe-9W-LgL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Heroes View Controller-->
+        <scene sceneID="DBz-6O-nAb">
+            <objects>
+                <viewController id="gGe-9W-LgL" userLabel="Heroes View Controller" customClass="HeroesViewController" customModule="DragonBallAppDPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FGX-jg-xMu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ECv-Im-kyl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fqr-lS-bOv">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellView" id="1LP-1a-rHG" customClass="CellView" customModule="DragonBallAppDPP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="186"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3fr-y9-E4u">
+                                            <rect key="frame" x="0.0" y="0.0" width="186" height="186"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBq-58-aaP">
+                                                    <rect key="frame" x="8" y="8" width="170" height="170"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCB-k1-Fpl">
+                                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaB-Wm-632">
+                                                            <rect key="frame" x="0.0" y="150.5" width="170" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="tCB-k1-Fpl" firstAttribute="top" secondItem="BBq-58-aaP" secondAttribute="top" id="0a1-aK-YG8"/>
+                                                        <constraint firstItem="NaB-Wm-632" firstAttribute="leading" secondItem="BBq-58-aaP" secondAttribute="leading" id="6Kc-Ie-rQV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tCB-k1-Fpl" secondAttribute="trailing" id="Re6-Ag-OmF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tCB-k1-Fpl" secondAttribute="bottom" id="pRV-hP-9u1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="NaB-Wm-632" secondAttribute="trailing" id="r9z-Ev-0t2"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NaB-Wm-632" secondAttribute="bottom" id="waj-dK-y6L"/>
+                                                        <constraint firstItem="tCB-k1-Fpl" firstAttribute="leading" secondItem="BBq-58-aaP" secondAttribute="leading" id="yUs-l3-BOF"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="BBq-58-aaP" secondAttribute="trailing" constant="8" id="1ys-B3-ig9"/>
+                                                <constraint firstAttribute="bottom" secondItem="BBq-58-aaP" secondAttribute="bottom" constant="8" id="gPa-bf-4aE"/>
+                                                <constraint firstItem="BBq-58-aaP" firstAttribute="leading" secondItem="3fr-y9-E4u" secondAttribute="leading" constant="8" id="lue-5g-khH"/>
+                                                <constraint firstItem="BBq-58-aaP" firstAttribute="top" secondItem="3fr-y9-E4u" secondAttribute="top" constant="8" id="xug-kc-ohO"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="186" height="186"/>
+                                        <connections>
+                                            <outlet property="cellImage" destination="tCB-k1-Fpl" id="0KP-BQ-mnG"/>
+                                            <outlet property="cellName" destination="NaB-Wm-632" id="fOS-jF-aug"/>
+                                            <outlet property="cellView" destination="BBq-58-aaP" id="nCV-1p-Ea3"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9VS-8j-NnW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ECv-Im-kyl" firstAttribute="top" secondItem="FGX-jg-xMu" secondAttribute="top" id="8ch-Er-ByN"/>
+                            <constraint firstItem="9VS-8j-NnW" firstAttribute="trailing" secondItem="ECv-Im-kyl" secondAttribute="trailing" id="YKd-EC-eHl"/>
+                            <constraint firstItem="ECv-Im-kyl" firstAttribute="leading" secondItem="9VS-8j-NnW" secondAttribute="leading" id="YoJ-Lb-qJI"/>
+                            <constraint firstItem="9VS-8j-NnW" firstAttribute="bottom" secondItem="ECv-Im-kyl" secondAttribute="bottom" id="oA2-vU-628"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HsC-gR-WwA"/>
+                    <connections>
+                        <outlet property="heroesCollectionView" destination="ECv-Im-kyl" id="KQf-Ix-3ss"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6XQ-fh-Y8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="-200"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

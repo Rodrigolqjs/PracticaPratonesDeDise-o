@@ -7,34 +7,36 @@
 
 import Foundation
 
-protocol DBCharactersViewModelProtocol {
+protocol VillainsViewModelProtocol {
     var dataCount: Int { get }
     func onViewsLoaded()
-    func data(for index: Int) -> Hero?
+    func data(for index: Int) -> Villain?
     func onItemSelectedAt(at index: Int)
+    func getVillains()
 }
 
-class DBCharactersViewModel {
+class VillainsViewModel {
     
-    var viewDelegate: DBCharactersViewControllerProtocol?
-    var heroes: [Hero]
+    var viewDelegate: VillainsViewControllerProtocol?
+    var villains: [Villain]
     
-    init(viewDelegate: DBCharactersViewControllerProtocol?, heroes: [Hero]) {
+    init(viewDelegate: VillainsViewControllerProtocol?, villains: [Villain]) {
         self.viewDelegate = viewDelegate
-        self.heroes = heroes
+        self.villains = villains
     }
     
     func loadData() {
+        
     }
     
 }
 
-extension DBCharactersViewModel: DBCharactersViewModelProtocol {
-    var dataCount: Int {heroes.count}
+extension VillainsViewModel: VillainsViewModelProtocol {
+    var dataCount: Int {villains.count}
     
-    func data(for index: Int) -> Hero? {
+    func data(for index: Int) -> Villain? {
         guard index < dataCount else { return nil }
-        return heroes[index]
+        return villains[index]
     }
     
     func onViewsLoaded() {
@@ -44,5 +46,9 @@ extension DBCharactersViewModel: DBCharactersViewModelProtocol {
     func onItemSelectedAt(at index: Int) {
         guard let data = data(for: index) else { return print("no data")}
         viewDelegate?.navigateToDetail(with: data)
+    }
+    
+    func getVillains() {
+        
     }
 }

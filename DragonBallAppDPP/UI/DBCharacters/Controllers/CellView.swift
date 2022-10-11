@@ -30,7 +30,7 @@ class CellView: UICollectionViewCell {
         cellName.text = nil
     }
 
-    func updateViews(data: Hero) {
+    func updateViews(data: Character) {
         self.cellImage.setImage(url: data.photo)
         self.cellName.text = data.name
     }

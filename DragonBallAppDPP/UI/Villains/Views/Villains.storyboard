@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Csh-cH-gKw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Villains View Controller-->
+        <scene sceneID="ZTG-KA-hY4">
+            <objects>
+                <viewController id="Csh-cH-gKw" userLabel="Villains View Controller" customClass="VillainsViewController" customModule="DragonBallAppDPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xXg-j6-IGo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cZ3-BV-Wki">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eC8-7h-CFt">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellView" id="0tp-Jb-EbB" customClass="CellView" customModule="DragonBallAppDPP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="186"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HRI-j1-t0n">
+                                            <rect key="frame" x="0.0" y="0.0" width="186" height="186"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGR-4e-WGT">
+                                                    <rect key="frame" x="8" y="8" width="170" height="170"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tob-me-5lb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyz-hj-yMu">
+                                                            <rect key="frame" x="0.0" y="150.5" width="170" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Qyz-hj-yMu" firstAttribute="leading" secondItem="TGR-4e-WGT" secondAttribute="leading" id="7KJ-fN-cPt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tob-me-5lb" secondAttribute="trailing" id="AES-aZ-QkX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tob-me-5lb" secondAttribute="bottom" id="SDg-2m-shS"/>
+                                                        <constraint firstItem="tob-me-5lb" firstAttribute="top" secondItem="TGR-4e-WGT" secondAttribute="top" id="fzU-5U-KMn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Qyz-hj-yMu" secondAttribute="trailing" id="hGy-Ph-OOj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Qyz-hj-yMu" secondAttribute="bottom" id="s71-jj-OH5"/>
+                                                        <constraint firstItem="tob-me-5lb" firstAttribute="leading" secondItem="TGR-4e-WGT" secondAttribute="leading" id="xpE-MM-Pny"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="TGR-4e-WGT" secondAttribute="bottom" constant="8" id="7Dr-7W-2sz"/>
+                                                <constraint firstItem="TGR-4e-WGT" firstAttribute="top" secondItem="HRI-j1-t0n" secondAttribute="top" constant="8" id="eRa-Zx-aGG"/>
+                                                <constraint firstItem="TGR-4e-WGT" firstAttribute="leading" secondItem="HRI-j1-t0n" secondAttribute="leading" constant="8" id="gz3-5e-twM"/>
+                                                <constraint firstAttribute="trailing" secondItem="TGR-4e-WGT" secondAttribute="trailing" constant="8" id="um6-cd-UfS"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="186" height="186"/>
+                                        <connections>
+                                            <outlet property="cellImage" destination="tob-me-5lb" id="0it-lM-UQf"/>
+                                            <outlet property="cellName" destination="Qyz-hj-yMu" id="zQi-AL-6CM"/>
+                                            <outlet property="cellView" destination="TGR-4e-WGT" id="LzX-1k-spa"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IY9-dE-fhh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cZ3-BV-Wki" firstAttribute="top" secondItem="xXg-j6-IGo" secondAttribute="top" id="87v-KX-uum"/>
+                            <constraint firstItem="IY9-dE-fhh" firstAttribute="bottom" secondItem="cZ3-BV-Wki" secondAttribute="bottom" id="Fd0-fG-Yb9"/>
+                            <constraint firstItem="cZ3-BV-Wki" firstAttribute="leading" secondItem="IY9-dE-fhh" secondAttribute="leading" id="Gyw-VU-hFr"/>
+                            <constraint firstItem="IY9-dE-fhh" firstAttribute="trailing" secondItem="cZ3-BV-Wki" secondAttribute="trailing" id="I34-1e-mly"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="teg-Nf-ZEJ"/>
+                    <connections>
+                        <outlet property="villainsCollectionView" destination="cZ3-BV-Wki" id="biL-fc-fUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LwM-Mo-Ikp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="199"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

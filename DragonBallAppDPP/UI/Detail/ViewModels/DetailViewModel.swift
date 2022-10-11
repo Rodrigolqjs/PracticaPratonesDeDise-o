@@ -14,9 +14,9 @@ protocol DetailViewModelProtocol {
 class DetailViewModel {
     
     var viewDelegate: DetailViewController?
-    var viewData: Hero
+    var viewData: Character
     
-    init(viewDelegate: DetailViewController, data: Hero) {
+    init(viewDelegate: DetailViewController, data: Character) {
         self.viewDelegate = viewDelegate
         self.viewData = data
     }

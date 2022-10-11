@@ -7,36 +7,37 @@
 
 import UIKit
 
-protocol DBCharactersViewControllerProtocol {
+protocol VillainsViewControllerProtocol {
     func configureViews()
-    func navigateToDetail(with data: Hero?)
+    func navigateToDetail(with data: Villain?)
 }
 
-class DBCharactersViewController: UIViewController {
+class VillainsViewController: UIViewController {
+
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var villainsCollectionView: UICollectionView!
     
-    var viewModel: DBCharactersViewModelProtocol?
+    
+    var viewModel: VillainsViewModelProtocol?
     var networkService: NetworkService?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Dragon Ball"
+    
         viewModel?.onViewsLoaded()
         configureViews()
     }
 
 }
 
-
-extension DBCharactersViewController: DBCharactersViewControllerProtocol {
+extension VillainsViewController: VillainsViewControllerProtocol {
     func configureViews() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        villainsCollectionView.delegate = self
+        villainsCollectionView.dataSource = self
     }
     
-    func navigateToDetail(with data: Hero?) {
+    func navigateToDetail(with data: Villain?) {
         let nextSB = UIStoryboard(name: "Detail", bundle: nil)
         guard let viewData = data,
               let destination = nextSB.instantiateInitialViewController() as? DetailViewController else { return }
@@ -48,7 +49,7 @@ extension DBCharactersViewController: DBCharactersViewControllerProtocol {
 }
 
 
-extension DBCharactersViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension VillainsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: (collectionView.frame.width / 2) - 8,
@@ -75,3 +76,4 @@ extension DBCharactersViewController: UICollectionViewDelegate, UICollectionView
     }
     
 }
+

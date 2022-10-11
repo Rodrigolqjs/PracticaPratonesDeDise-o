@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DetailViewControllerProtocol {
-    func updateViews(data: Hero)
+    func updateViews(data: Character)
 }
 
 class DetailViewController: UIViewController {
@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: DetailViewControllerProtocol {
-    func updateViews(data: Hero) {
+    func updateViews(data: Character) {
         self.imageView.setImage(url: data.photo)
         self.heroName.text = data.name
         self.heroDescription.text = data.description

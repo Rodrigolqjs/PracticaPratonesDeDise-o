@@ -64,7 +64,7 @@ final class NetworkService {
       task.resume()
     }
     
-    func getHeroes(token: String = "", completion: @escaping ([Hero], NetworkError?) -> Void) {
+    func getCharacters(token: String = "", completion: @escaping ([Character], NetworkError?) -> Void) {
       self.token = token
         
       guard let url = URL(string: "https://vapor2022.herokuapp.com/api/heros/all") else {
